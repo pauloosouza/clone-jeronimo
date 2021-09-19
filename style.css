@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap');
+
+
+/*Se em caso precisar de trocar uma cor, não precisa ficar procurando de um de cada vez, só trocar a variavél*/
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+
+:root{
+    --cor-fundo : rgb(34, 41, 37);
+    --cor-hover : #f5bf18;
+    --cor-primaria : rgb(0, 0, 0);  
+}
+
+#capa-site{
+    position: relative;
+    width: 100%;
+    height: 330px;
+    background-image: url('./banner-desk.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: 50% 81px;
+    height: calc(100vh - 100px);
+    background-repeat: no-repeat;
+    
+}
+
+#capa-site img{
+    padding: 0;
+    width: 100%;
+}
+
+.menu{
+    background-color: #FFFF;
+    height: 100px;
+}
+
+.menu ul{
+    list-style: none; /* Tira as marcações de ordenado ou não ordenado*/
+   padding: 0 36px 0 36px;
+    display:flex;
+    align-items: center;
+    height: inherit;
+}
+
+.menu ul .logo{
+    height:80px;
+    width: 250px;
+    margin-right: 50px;
+}
+
+.menu ul li.logo svg{
+    width: inherit;
+    height: auto;
+}
+
+.menu ul li{
+    display: inline; /* Ajustar tudo em uma linha o menu*/
+    position: relative;
+}
+
+.menu #call-delivery{
+    width: 200px;
+    height: 55px;
+    background-color: #f6bf16;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu ul li a{
+    color: var(--cor-primaria); /*Chamando a cor primaria que eu definir na variavél no caso da font*/
+    text-decoration: none; /*Remover o sublinhado do texto*/
+    display: inline-block;
+    padding: 10px; /*Para afastar uma opção do menu para outra*/
+    transition: background .1s ease-out;
+    font-family: 'Roboto', sans-serif;
+    font-size: 19px;
+}
+
+.menu ul li a:hover{
+    color: black;
+    color: var(--cor-hover);
+    transform:scale(0.95);
+    transition: all .3s linear;
+}
+
+/*SUB MENU*/
+
+.menu ul ul{
+    display: none;
+    left: 0;
+    position: absolute; 
+}
+
+.menu ul li:hover ul{ 
+   
+    display: block; 
+}
+
+.menu ul ul{
+   width: 150px;
+}
+
+.menu ul ul li a{
+    display: block;
+}
+
+img{
+    padding: 3px;
+    height: 330px;
+}
+
+
